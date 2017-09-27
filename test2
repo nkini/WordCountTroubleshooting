@@ -1,9 +1,32 @@
-17/09/26 17:19:30 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-17/09/26 17:19:31 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
-17/09/26 17:19:32 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
-17/09/26 17:19:32 INFO input.FileInputFormat: Total input files to process : 1
-17/09/26 17:19:32 INFO mapreduce.JobSubmitter: number of splits:1
-17/09/26 17:19:33 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1506470811459_0002
-17/09/26 17:19:33 INFO impl.YarnClientImpl: Submitted application application_1506470811459_0002
-17/09/26 17:19:33 INFO mapreduce.Job: The url to track the job: http://homeportal:8088/proxy/application_1506470811459_0002/
-17/09/26 17:19:33 INFO mapreduce.Job: Running job: job_1506470811459_0002
+17/09/26 17:52:55 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/09/26 17:52:57 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+17/09/26 17:52:58 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+17/09/26 17:52:58 INFO input.FileInputFormat: Total input files to process : 1
+17/09/26 17:52:58 INFO mapreduce.JobSubmitter: number of splits:1
+17/09/26 17:52:58 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1506473293936_0003
+17/09/26 17:52:59 INFO impl.YarnClientImpl: Submitted application application_1506473293936_0003
+17/09/26 17:52:59 INFO mapreduce.Job: The url to track the job: http://localhost:8088/proxy/application_1506473293936_0003/
+17/09/26 17:52:59 INFO mapreduce.Job: Running job: job_1506473293936_0003
+17/09/26 17:53:03 INFO mapreduce.Job: Job job_1506473293936_0003 running in uber mode : false
+17/09/26 17:53:03 INFO mapreduce.Job:  map 0% reduce 0%
+17/09/26 17:53:03 INFO mapreduce.Job: Job job_1506473293936_0003 failed with state FAILED due to: Application application_1506473293936_0003 failed 2 times due to AM Container for appattempt_1506473293936_0003_000002 exited with  exitCode: 127
+Failing this attempt.Diagnostics: Exception from container-launch.
+Container id: container_1506473293936_0003_02_000001
+Exit code: 127
+Stack trace: ExitCodeException exitCode=127: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:972)
+	at org.apache.hadoop.util.Shell.run(Shell.java:869)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:1170)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:236)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:305)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:84)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+Container exited with a non-zero exit code 127
+For more detailed output, check the application tracking page: http://localhost:8088/cluster/app/application_1506473293936_0003 Then click on links to logs of each attempt.
+. Failing the application.
+17/09/26 17:53:03 INFO mapreduce.Job: Counters: 0
